@@ -1,0 +1,261 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* svg icons */
+svg{
+  width: 40px;
+}
+
+svg:not(.gear,.logo-svg){
+  width: 200px;
+  fill: #9bd46a;
+}
+.logo-svg{
+  width: 25px;
+   fill: #9cc17b;
+}
+.gear:hover{
+  transform: rotate(20deg);
+}
+
+/*all pages */
+.page{
+  background-color: #c1c1c1;
+  height: 100%;
+  display: flex;
+  background-color: #091e58;
+}
+/* home page */
+.home-page {
+  flex-direction: column;
+  align-items: center;
+}
+/* signup page */
+.signup-page{
+  justify-content: center;
+  align-items: center;
+}
+/* forgotpassword page */
+.forgotpassword-page{
+  justify-content: center;
+  align-items: center;
+}
+
+/* user pag dashboard page */
+.userdash-page{
+  flex-direction: column;
+}
+
+/* userdashboard content */
+.dashboard-content{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* logo title component */
+.logo-container {
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-bottom: 10px;
+}
+.logo{
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 110px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.logo-container h1{
+  margin:0;
+}
+
+/* forms */
+.form {
+  background-color: #89622c00;
+  border: solid 2px white;
+  border-radius: 15px;
+  width: 75%;
+  padding: 40px 25px;
+}
+
+/* login form component */
+.login-form {
+  flex-grow: 1;
+  text-align: center;
+}
+.login-form  *{
+  margin-top: 10px;
+}
+.login-form .btn-warning{
+  margin-bottom: 10px;
+  color: white;
+}
+.login-form button{
+  width: 100%;
+}
+.login-form p{
+  color: white;
+}
+
+/* sign up form component */
+.form-header{
+  color: white;
+  margin-bottom: 15px;
+}
+.signup-form form *{
+  margin: 10px 0;
+}
+
+.signup-form .col{
+  padding: 0;
+ 
+}
+.signup-form .col:first-of-type{
+  margin-right: 8px;
+ 
+}
+
+/* forgot password form component */
+.resetpassword-form h1 {
+ color: white;
+ margin-bottom: 25px;
+}
+
+/* header */
+.header-container{
+    background-color: white;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.header h1{
+  margin: 0;
+  color: #9bd46a;
+}
+
+/* navigation */
+.nav-container{
+background-color: #040b1e;
+height: 8%;
+}
+.nav{
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  align-items: center;
+}
+.nav-item a{
+  color: rgb(198, 198, 198);
+  text-decoration: none;
+}
+
+.nav-item a.active{
+  color: #9bd46a;
+  text-decoration: underline;
+}
+
+/* settings page */
+.settings{
+  text-align: center;
+  color: white;
+}
+
+/* tablet size and up, desktop etc...  */
+
+@media screen and (min-width: 768px) {
+
+  /* home page */
+  .home-page {
+    flex-direction: row;
+  }
+  /* logo container */
+  .logo-container{
+      width: 50%;
+      height: 60%;
+      justify-content: center;
+  }
+
+  .logo{
+    flex-direction: column;
+  }
+  .logo h1{
+    font-size:100px;
+  }
+  .logo-svg{
+    width: 125px;
+    margin: 20px 0;
+  }
+ 
+  .logo-desc{
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+
+  /* login form */
+  .login-form{
+    padding: 5%;
+  }
+  .login-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .login-form form input, .login-form form a:first-of-type button,.create-new{
+    height: 40px;
+  }
+
+  /* user dashboard */
+  .userdash-page{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+    "header header"
+    "nav dash"
+    "nav dash";
+  }
+  .header-container{
+      grid-area: header;
+  }
+
+  .dashboard-content{
+      grid-area: dash;
+  }
+
+  .nav-container{
+    grid-area: nav;
+    height: 100%;
+
+  }
+  .nav{
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+
+}
